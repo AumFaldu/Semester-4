@@ -23,7 +23,7 @@ CREATE TABLE Person (
  FOREIGN KEY (DesignationID) REFERENCES Designation(DesignationID)
 );
 --PART-A
---1 Department, Designation & Person Table’s INSERT, UPDATE & DELETE Procedures.
+--1 Department, Designation & Person Tableâ€™s INSERT, UPDATE & DELETE Procedures.
 CREATE OR ALTER PROCEDURE PR_DEPARTMENT_INSERT
 @DeptID int,
 @DeptName varchar(100)
@@ -125,9 +125,8 @@ PR_PERSON_INSERT 'Bhoomi','Patel',39000,'2014-02-20',1,13
 PR_PERSON_INSERT 'Rohit','Rajgor',17000,'1990-07-23',2,15
 PR_PERSON_INSERT 'Priya','Mehta',25000,'1990-10-18',2,NULL
 PR_PERSON_INSERT 'Neha','Trivedi',18000,'2014-02-20',3,15
-SELECT * FROM PERSON
-SELECT * from Department
---2 Department, Designation & Person Table’s SELECTBYPRIMARYKEY
+
+--2 Department, Designation & Person Tableâ€™s SELECTBYPRIMARYKEY
 CREATE OR ALTER PROCEDURE PR_DEPARTMENT_SELECTBYPRIMARYKEY
 @DID INT
 AS
@@ -149,7 +148,7 @@ BEGIN
 	SELECT * FROM Person WHERE PersonID=@PID
 END
 
---3 Department, Designation & Person Table’s (If foreign key is available then do write join and take columns on select list) 
+--3 Department, Designation & Person Tableâ€™s (If foreign key is available then do write join and take columns on select list) 
 CREATE OR ALTER PROCEDURE PR_PERSON_JOIN
 AS
 BEGIN
@@ -172,7 +171,7 @@ BEGIN
 	SELECT * FROM PERSON AS p JOIN DEPARTMENT AS d ON p.departmentID=d.departmentID WHERE d.DepartmentName=@DeptName
 END
 
---6 Create Procedure that takes department name & designation name as input and returns a table with worker’s first name, salary, joining date & department name. 
+--6 Create Procedure that takes department name & designation name as input and returns a table with workerâ€™s first name, salary, joining date & department name. 
 CREATE OR ALTER PROCEDURE PR_PERSON_DISPLAY
 @DeptName varchar(100),
 @DesName varchar(100)
