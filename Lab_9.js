@@ -1,4 +1,4 @@
-//Part-B
+//Part-A
 use BANK_INFO
 db.createCollection("Deposit")
 db.Deposit.insertMany([
