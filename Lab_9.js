@@ -124,3 +124,17 @@ db.Student.find({$or:[{age:25},{age:30},{age:35}]})
  db.Student.find({name:'John',city:'New York'})
  //10
  db.Student.find({name:'John',city:'New York'},{name:1,age:1,_id:0})
+
+ //Part-C
+ //1
+ db.Student.find({age : {$gte:25,$lte:35}}).sort({age:1})
+ //2
+ db.Student.find().sort({name:1,age:-1})
+ //3
+ db.Student.find().limit(5)
+ //4
+ db.Student.find().skip(3).limit(2)
+ //5
+ db.Student.find({},{name:1,_id:0}).sort({age:-1}).limit(1)
+ //6
+ db.Student.find().skip(2)
