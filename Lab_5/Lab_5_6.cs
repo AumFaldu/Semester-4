@@ -60,11 +60,11 @@ namespace Lab_5
                         value = Console.ReadLine();
                         if (ht.ContainsValue(value))
                         {
-                            Console.WriteLine("Dictionary contains " + value);
+                            Console.WriteLine("HashTable contains " + value);
                         }
                         else
                         {
-                            Console.WriteLine("Dictionary does not contain " + value);
+                            Console.WriteLine("HashTable does not contain " + value);
                         }
                         break;
                     case 5:
