@@ -77,7 +77,7 @@ BEGIN
 		SET @ANS = @ANS*@i
 		SET @i=@i+1
 	END
-			RETURN @ANS
+	RETURN @ANS
 END
 SELECT dbo.FN_FACTORIAL(6)
 
