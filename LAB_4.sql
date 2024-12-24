@@ -54,7 +54,8 @@ SELECT * FROM dbo.FN_UNIQUE_FNAME()
 --6 Write a function to print number from 1 to N. (Using while loop)
 CREATE OR ALTER FUNCTION FN_PRINT1ToN(@N INT)
 RETURNS VARCHAR(100)
-AS BEGIN
+AS
+BEGIN
 	DECLARE @ANS VARCHAR(100)='',@i INT=1
 	WHILE @i<=@N
 	BEGIN
