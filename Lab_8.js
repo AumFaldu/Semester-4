@@ -65,3 +65,63 @@ db.Faculty.find()
 db.Faculty.drop()
 //7
 db.Computer.drop()
+
+//Part-C(Using UI)
+//3
+[{
+    "FID":1,
+    "FNAME":"ANIL",
+    "BNAME":"CE",
+    "SALARY":10000,
+    "JDATE":"1995-03-01"
+},
+{
+    "FID":2,
+    "FNAME":"SUNIL",
+    "BNAME":"CE",
+    "SALARY":50000,
+    "JDATE":"1996-01-04"
+},
+{
+    "FID":3,
+    "FNAME":"MEHUL",
+    "BNAME":"IT",
+    "SALARY":35000,
+    "JDATE":"1995-11-17"
+},
+{
+    "FID":4,
+    "FNAME":"MADHURI",
+    "BNAME":"IT",
+    "SALARY":12000,
+    "JDATE":"1995-12-17"
+},
+{
+    "FID":5,
+    "FNAME":"PRMOD",
+    "BNAME":"CE",
+    "SALARY":30000,
+    "JDATE":"1996-03-27"
+},
+{
+    "FID":6,
+    "FNAME":"SANDIP",
+    "BNAME":"CE",
+    "SALARY":20000,
+    "JDATE":"1996-03-31"
+},
+{
+    "FID":7,
+    "FNAME":"SHIVANI",
+    "BNAME":"CE",
+    "SALARY":10000,
+    "JDATE":"1995-09-05"
+},
+{
+    "FID":8,
+    "FNAME":"KRANTI",
+    "BNAME":"IT",
+    "SALARY":50000,
+    "JDATE":"1995-07-02"
+}
+]
