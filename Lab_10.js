@@ -58,36 +58,40 @@ db.Student.updateMany({},{$rename:{isActive:'status'}})
 //29
 db.Student.updateMany({city:'San Francisco'},{$rename:{age:'yearsOld'}})
 //30
-db.createCollection("Employee", {
+db.createCollection('Employee', {
     capped: true,
     size: 5120,
     max: 100,
     validator: {
         $jsonSchema: {
-            bsonType: "object",
-            required: ["Ecode", "Ename"],
+            bsonType: 'object',
+            required: ['Ecode', 'Ename'],
             properties: {
                 Ecode: {
-                    bsonType: "int"
+                    bsonType: 'int',
+                    description: 'Ecode must be a int and is required'
                 },
                 Ename: {
-                    bsonType: "string"
+                    bsonType: 'string',
+                    description: 'Ename must be an string and is required'
                 },
                 Age: {
-                    bsonType: "int"
+                    bsonType: 'int',
+                    description: 'Age must be a int and is required'
                 },
                 City: {
-                    bsonType: "string"
+                    bsonType: 'string',
+                    description: 'City must be an string and is required'
                 }
             }
         }
     }
-});
+})
 
 db.Employee.insertMany([
-    {"Ecode": 1, "Ename": "John"},
-    {"Ecode": 2, "Ename": "Jane", "Age": 25, "City": "Los Angeles"},
-    {"Ecode": 3, "Ename": "Tom", "Age": 35},
-    {"Ecode": 4, "Ename": "Lucy", "Age": 28, "City": "San Francisco"},
-    {"Ecode": 5,"Ename": "Dino"}
-]);
+    { Ecode: 1, Ename: 'John' },
+    { Ecode: 2, Ename: 'Jane', Age: 25, City: 'Los Angeles' },
+    { Ecode: 3, Ename: 'Tom', Age: 35 },
+    { Ecode: 4, Ename: 'Lucy', Age: 28, City: 'San Francisco', isActive: true },
+    { Ecode: 5, Ename: 'Dino', Age: 40, City: '' },
+])
