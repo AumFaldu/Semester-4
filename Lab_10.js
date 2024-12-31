@@ -48,7 +48,7 @@ db.Student.deleteOne({isActive:true})
 //24
 db.Student.deleteMany({city:'Los Angeles'})
 //25
-db.Student.deleteMany({city:""})
+db.Student.deleteMany({city: {$exists: false}})
 //26
 db.Student.updateMany({},{$rename:{city:'location'}})
 //27
