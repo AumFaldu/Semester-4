@@ -95,3 +95,98 @@ db.Employee.insertMany([
     { Ecode: 4, Ename: 'Lucy', Age: 28, City: 'San Francisco', isActive: true },
     { Ecode: 5, Ename: 'Dino', Age: 40, City: '' },
 ])
+
+//Part-B
+db.createCollection("Student_data")
+db.Student_data.insertMany([{
+    "ROLLNO": 101,
+    "SNAME": "Vina",
+    "DEPARTMENT": "CE",
+    "FEES": 15000,
+    "SEM": 3,
+    "GENDER": "Female",
+    "CITY": "Rajkot"
+  },
+  {
+    "ROLLNO": 102,
+    "SNAME": "Krisha",
+    "DEPARTMENT": "EC",
+    "FEES": 8000,
+    "SEM": 5,
+    "GENDER": "Female",
+    "CITY": "Ahmedabad"
+  },
+  {
+    "ROLLNO": 103,
+    "SNAME": "Priti",
+    "DEPARTMENT": "Civil",
+    "FEES": 12000,
+    "SEM": 7,
+    "GENDER": "Female",
+    "CITY": "Baroda"
+  },
+  {
+    "ROLLNO": 104,
+    "SNAME": "Mitul",
+    "DEPARTMENT": "CE",
+    "FEES": 15000,
+    "SEM": 3,
+    "GENDER": "Male",
+    "CITY": "Rajkot"
+  },
+  {
+    "ROLLNO": 105,
+    "SNAME": "Keshav",
+    "DEPARTMENT": "CE",
+    "FEES": 15000,
+    "SEM": 3,
+    "GENDER": "Male",
+    "CITY": "Jamnagar"
+  },
+  {
+    "ROLLNO": 106,
+    "SNAME": "Zarna",
+    "DEPARTMENT": "Civil",
+    "FEES": 12000,
+    "SEM": 5,
+    "GENDER": "Female",
+    "CITY": "Ahmedabad"
+  },
+  {
+    "ROLLNO": 107,
+    "SNAME": "Nima",
+    "DEPARTMENT": "EE",
+    "FEES": 9000,
+    "SEM": 5,
+    "GENDER": "Female",
+    "CITY": "Rajkot"
+  },
+  {
+    "ROLLNO": 108,
+    "SNAME": "Dhruv",
+    "DEPARTMENT": "Mechanical",
+    "FEES": 10000,
+    "SEM": 5,
+    "GENDER": "Male",
+    "CITY": "Rajkot"
+  },
+  {
+    "ROLLNO": 109,
+    "SNAME": "Krish",
+    "DEPARTMENT": "Mechanical",
+    "FEES": 10000,
+    "SEM": 7,
+    "GENDER": "Male",
+    "CITY": "Baroda"
+  },
+  {
+    "ROLLNO": 110,
+    "SNAME": "Zeel",
+    "DEPARTMENT": "EE",
+    "FEES": 9000,
+    "SEM": 3,
+    "GENDER": "Female",
+    "CITY": "Jamnagar"
+  }
+])
+
