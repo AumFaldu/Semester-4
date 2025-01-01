@@ -233,3 +233,28 @@ db.Student_data.updateMany({FEES:{$gt:9000}},{$rename:{FEES:'Tuiton_Fees'}})
 db.Student_data.updateMany({$and:[{FEES:{$lt:15000}},{GENDER:'Female'}]},{$rename:{DEPARTMENT:'Major'}})
 //22
 db.Student_data.updateMany({SEM:3,DEPARTMENT:{$ne:'Mechanical'}},{$rename:{CITY:'HomeTown'}})
+
+//Part-C
+//1
+db.createCollection("logs",{capped:true,size:10240,max:10})
+//2
+db.logs.insertMany([{ message: "System started", level: "info", timestamp: new Date() }, 
+{ message: "Disk space low", level: "warning", timestamp: new Date() }, 
+{ message: "User login", level: "info", timestamp: new Date() }, 
+{ message: "System reboot", level: "info", timestamp: new Date() }, 
+{ message: "Error in module", level: "error", timestamp: new Date() }, 
+{ message: "Memory usage high", level: "warning", timestamp: new Date() }, 
+{ message: "User logout", level: "info", timestamp: new Date() }, 
+{ message: "File uploaded", level: "info", timestamp: new Date() }, 
+{ message: "Network error", level: "error", timestamp: new Date() }, 
+{ message: "Backup completed", level: "info", timestamp: new Date() }, 
+{ message: "Database error", level: "error", timestamp: new Date() }, 
+{ message: "Service started", level: "info", timestamp: new Date() } ])
+//3
+db.logs.find().sort({_id:-1}).limit(12)
+//4
+db.logs.insertMany([{ message: "New log entry 1", level: "info", timestamp: new Date() }, 
+{ message: "New log entry 2", level: "info", timestamp: new Date() }, 
+{ message: "New log entry 3", level: "info", timestamp: new Date() }, 
+{ message: "New log entry 4", level: "warning", timestamp: new Date() }, 
+{ message: "New log entry 5", level: "error", timestamp: new Date() } ])
