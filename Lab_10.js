@@ -189,4 +189,12 @@ db.Student_data.insertMany([{
     "CITY": "Jamnagar"
   }
 ])
-
+//1
+db.Student_data.find({$and:[{GENDER:'Female'},{CITY:'Rajkot'}]})
+//2
+db.Student_data.find({SEM:{$ne:3}})
+//3
+db.Student_data.find({CITY:{$in:['Jamnagar','Baroda']}})
+//4
+db.Student_data.find({CITY:'Baroda'}).limit(2)
+//5
