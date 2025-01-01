@@ -198,3 +198,7 @@ db.Student_data.find({CITY:{$in:['Jamnagar','Baroda']}})
 //4
 db.Student_data.find({CITY:'Baroda'}).limit(2)
 //5
+db.Student_data.find({$and:[{GENDER:'Male'},{SEM:3}]})
+//6
+db.Student_data.find({ROLLNO:{$lt:105}},{SNAME:1,CITY:1,FEES:1,_id:0})
+//7
