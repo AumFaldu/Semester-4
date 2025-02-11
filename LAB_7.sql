@@ -29,7 +29,7 @@ BEGIN
 	END CATCH
 END
 PR_ZeroDivisionError 1,0
---2 Try to convert string to integer and handle the error using tryÖcatch block.
+--2 Try to convert string to integer and handle the error using try‚Ä¶catch block.
 CREATE OR ALTER PROCEDURE PR_StringToInt
 @a VARCHAR(10)
 AS
@@ -123,7 +123,7 @@ AS
 BEGIN
 	THROW 
 END
---8 Create a Procedure to Update Customerís Email with Error Handling
+--8 Create a Procedure to Update Customer‚Äôs Email with Error Handling
 CREATE OR ALTER PROCEDURE PR_Customer_Email
 @Cid INT,
 @Email VARCHAR(50)
@@ -145,7 +145,7 @@ BEGIN
 END;
 
 --PART-C
---9 Create a procedure which prints the error message that ìThe Customer_id is already taken. Try another oneî.
+--9 Create a procedure which prints the error message that ‚ÄúThe Customer_id is already taken. Try another one‚Äù.
 CREATE OR ALTER PROCEDURE PR_Check_CustomerId
 @Cid INT
 AS
@@ -159,4 +159,16 @@ BEGIN
         PRINT 'Customer_id is available';
     END
 END;
-
+--10 Handle Duplicate Email Insertion in Customers Table.
+CREATE OR ALTER PROCEDURE PR_Customers_Insert_DuplicateEmail
+@Cid INT,
+@CName VARCHAR(50),
+@Email VARCHAR(50)
+AS
+BEGIN
+	IF EXISTS (SELECT * FROM Customers WHERE Email=@Email)
+		THROW 50001,'Email already exists',1;
+	ELSE
+		INSERT INTO Customers VALUES(@Cid,@CName,@Email)
+END
+PR_Customers_Insert_DuplicateEmail 2,'Rohan','a@b'
