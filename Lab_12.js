@@ -137,7 +137,7 @@ db.Student.aggregate([{$match:{DEPARTMENT:{$in:["CE","Mechanical"]}}},{$group:{_
 db.Student.aggregate([
     {
       $group: {
-        _id: "$department",
+        _id: "$DEPARTMENT",
         maleCount: { $sum: { $cond: [{ $eq: ["$GENDER", "Male"] }, 1, 0] } },
         femaleCount: { $sum: { $cond: [{ $eq: ["$GENDER", "Female"] }, 1, 0] } }
       }
